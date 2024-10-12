@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Convert.MainPage"
+            Title="Conversor de Unidades">
+    <TabbedPage.Children>
+        <ContentPage Title="Distância">
+            <StackLayout Padding="20">
+                <Entry x:Name="entradaDistancia" Placeholder="Digite o valor" Keyboard="Numeric" />
+                <Picker x:Name="seletorDistanciaDe" Title="De">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Metros</x:String>
+                            <x:String>Quilômetros</x:String>
+                            <x:String>Milhas</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Picker x:Name="seletorDistanciaPara" Title="Para">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Metros</x:String>
+                            <x:String>Quilômetros</x:String>
+                            <x:String>Milhas</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Converter" Clicked="AoConverterDistancia" />
+                <Label x:Name="resultadoDistanciaLabel" Text="Resultado" />
+            </StackLayout>
+        </ContentPage>
+
+        <ContentPage Title="Peso">
+            <StackLayout Padding="20">
+                <Entry x:Name="entradaPeso" Placeholder="Digite o valor" Keyboard="Numeric" />
+                <Picker x:Name="seletorPesoDe" Title="De">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Gramas</x:String>
+                            <x:String>Quilogramas</x:String>
+                            <x:String>Libras</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Picker x:Name="seletorPesoPara" Title="Para">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Gramas</x:String>
+                            <x:String>Quilogramas</x:String>
+                            <x:String>Libras</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Converter" Clicked="AoConverterPeso" />
+                <Label x:Name="resultadoPesoLabel" Text="Resultado" />
+            </StackLayout>
+        </ContentPage>
+
+        <ContentPage Title="Temperatura">
+            <StackLayout Padding="20">
+                <Entry x:Name="entradaTemperatura" Placeholder="Digite o valor" Keyboard="Numeric" />
+                <Picker x:Name="seletorTemperaturaDe" Title="De">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Celsius</x:String>
+                            <x:String>Fahrenheit</x:String>
+                            <x:String>Kelvin</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Picker x:Name="seletorTemperaturaPara" Title="Para">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Celsius</x:String>
+                            <x:String>Fahrenheit</x:String>
+                            <x:String>Kelvin</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Button Text="Converter" Clicked="AoConverterTemperatura" />
+                <Label x:Name="resultadoTemperaturaLabel" Text="Resultado" />
+            </StackLayout>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>
